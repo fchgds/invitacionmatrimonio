@@ -1,7 +1,7 @@
 // Galería de fotos automática
 const gallery = document.getElementById("gallery");
 const fotos = [
-  "fotos/Novios_con_Dron.png",
+  "fotos/novios.png",
   // Puedes agregar más fotos aquí si las añades a la carpeta
 ];
 fotos.forEach((foto) => {
