@@ -1,22 +1,3 @@
-// Galería de fotos automática
-const gallery = document.getElementById("gallery");
-const fotos = [
-  "fotos/novios.png",
-  // Puedes agregar más fotos aquí si las añades a la carpeta
-];
-fotos.forEach((foto) => {
-  const img = document.createElement("img");
-  img.src = foto;
-  img.alt = "Foto de los novios";
-  img.className = "gallery-img";
-  img.style.opacity = 0;
-  gallery.appendChild(img);
-  setTimeout(() => {
-    img.style.transition = "opacity 1.2s";
-    img.style.opacity = 1;
-  }, 300);
-});
-
 // Animación de entrada para las imágenes
 window.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".gallery-img").forEach((img, i) => {
@@ -98,3 +79,32 @@ function startCountdown() {
 }
 
 window.addEventListener('DOMContentLoaded', startCountdown);
+
+// Remove previous scroll-to-play behavior and replace with a fixed toggle button
+function setupAudioToggle() {
+  const audio = document.getElementById('bgAudio');
+  const btn = document.getElementById('audioToggleBtn');
+  if (!audio || !btn) return;
+
+  function updateButton() {
+    const playing = !audio.paused && !audio.ended;
+    btn.setAttribute('aria-pressed', playing ? 'true' : 'false');
+    btn.textContent = playing ? '🔈' : '🎵';
+  }
+
+  btn.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play().catch(() => {
+        // autoplay may be blocked; keep button state
+      }).finally(updateButton);
+    } else {
+      audio.pause();
+      updateButton();
+    }
+  });
+
+  // reflect initial state
+  updateButton();
+}
+
+window.addEventListener('DOMContentLoaded', setupAudioToggle);
