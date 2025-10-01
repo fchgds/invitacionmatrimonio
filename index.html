@@ -16,6 +16,56 @@
         <h2 class="subtitle">Queremos invitarte a nuestra boda</h2>
         <h1 class="title">Carolina & Fernando</h1>
     </header>
+    <section class="folding-section" id="foldingSection">
+        <div class="folding-container">
+            <div class="fold left-fold" id="leftFold">
+                <img src="fotos/CF2.jpg" alt="Carolina y Fernando" class="fold-image">
+            </div>
+            <div class="fold right-fold" id="rightFold">
+                <img src="fotos/CF1.jpg" alt="Carolina y Fernando" class="fold-image">
+            </div>
+        </div>
+    </section>
+    <section class="itinerario-section">
+        <h2 class="subtitle">Itinerario</h2>
+        <div class="itinerario">
+            <div class="it-item">
+                <div class="it-icon">⛪</div>
+                <div class="it-text">
+                    <div class="it-title">Ceremonia Religiosa</div>
+                    <div class="it-time">17:00</div>
+                </div>
+            </div>
+            <div class="it-item">
+                <div class="it-icon">🥂</div>
+                <div class="it-text">
+                    <div class="it-title">Recepción Social</div>
+                    <div class="it-time">19:30</div>
+                </div>
+            </div>
+            <div class="it-item">
+                <div class="it-icon">💃</div>
+                <div class="it-text">
+                    <div class="it-title">Ingreso de los Novios</div>
+                    <div class="it-time">20:00</div>
+                </div>
+            </div>
+            <div class="it-item">
+                <div class="it-icon">🍽️</div>
+                <div class="it-text">
+                    <div class="it-title">Cena</div>
+                    <div class="it-time">20:30</div>
+                </div>
+            </div>
+            <div class="it-item">
+                <div class="it-icon">🎂</div>
+                <div class="it-text">
+                    <div class="it-title">Corte de Torta</div>
+                    <div class="it-time">23:00</div>
+                </div>
+            </div>
+        </div>
+    </section>
     <img src="Flores.png" alt="Decoración floral" class="flores-decoracion">
     <section class="info">
         <h2 class="subtitle">Con la Bendición de Dios y de nuestros padres:</h2>
@@ -30,16 +80,28 @@
             </div>
         </div>
     </section>
+    <section class="audio-section">
+        <audio controls autoplay loop>
+            <source src="aassets\canon-in-d-pachelbel-190929.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    </section>
+    <section class="countdown-section" aria-live="polite">
+        <div class="countdown-wrap">
+            <div class="count-label">Solo faltan:</div>
+            <div class="count-value" id="countdown">Cargando...</div>
+        </div>
+    </section>
     <section class="info">
         <div class="details">
             <h2 class="subtitle">22 de noviembre de 2025</h2>
-            <p style="font-size: 4rem;">⛪</p>
+            <p class="big-emoji">⛪</p>
             <h2 class="subtitle">Capilla Nuestra Señora del Rosario</h2>
             <p class="subtitle">a las 17:00</p>
             <a href="https://www.google.com/maps/search/?api=1&query=Capilla+Nuestra+Se%C3%B1ora+del+Rosario,+Calle+Teniente+W+Vega,+Santa+Cruz+de+la+Sierra,+Bolivia"
                 target="_blank" rel="noopener" class="maps-btn">Calle Teniente W Vega, Entre 1er y 2do
                 Anillo, Zona del Parque Urbano, Santa Cruz de la Sierra, Bolivia</a>
-            <p style="font-size: 4rem;">🎉</p>
+            <p class="big-emoji">🎉</p>
             <h2 class="subtitle">Salón de Eventos Ana María Norte</h2>
             <p class="subtitle">a las 20:00</p>
             <a href="https://www.google.com/maps/search/?api=1&query=Sal%C3%B3n+de+Eventos+Ana+Mar%C3%ADa+Norte,+Av+Cristo+Redentor,+Santa+Cruz+de+la+Sierra,+Bolivia"
@@ -57,10 +119,10 @@
             <!-- Las fotos se cargarán aquí -->
         </div>
     </section>
+
     <footer class="footer">
         <p>Con amor ❤️<br> Carolina & Fernando</p>
     </footer>
-    <!-- decoración floral ya está arriba -->
     <script src="script.js"></script>
 </body>
 

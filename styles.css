@@ -110,15 +110,205 @@ body {
 .calendar-link:hover {
   border: 2px solid #fff;
 }
+.audio-section {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(122, 35, 39, 0.08);
+  animation: fadeInUp 1.8s;
+}
+.audio-section audio {
+  width: 100%;
+  max-width: 400px;
+  height: 50px;
+  border-radius: 25px;
+  outline: none;
+  background: rgba(191, 161, 74, 0.1);
+  border: 2px solid #bfa14a;
+}
+.audio-section audio::-webkit-media-controls-panel {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 25px;
+}
+.audio-section audio::-webkit-media-controls-play-button {
+  background-color: #bfa14a;
+  border-radius: 50%;
+}
 .padres-columns {
   display: flex;
   justify-content: center;
   gap: 3rem;
   margin: 1.2rem 0;
 }
+.itinerario-section {
+  max-width: 720px;
+  margin: 2rem auto;
+  background: rgba(255,255,255,0.55);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(122,35,39,0.06);
+  text-align: center;
+}
+.itinerario {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem 1.5rem;
+  align-items: center;
+}
+.it-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+.it-icon {
+  font-size: 4rem;
+  width: 4.5rem;
+  height: 4.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.it-text {
+  text-align: left;
+}
+.it-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #7a2327;
+}
+.it-time {
+  font-family: "Great Vibes", cursive;
+  color: #3d0c11;
+}
+
+.big-emoji {
+  font-size: 4rem;
+  margin: 0.5rem 0;
+}
+
+/* Countdown styles */
+.countdown-section {
+  max-width: 720px;
+  margin: 1.5rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.countdown-wrap {
+  background: rgba(255,255,255,0.65);
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 18px rgba(122,35,39,0.06);
+  text-align: center;
+}
+.count-label {
+  font-family: "Montserrat", sans-serif;
+  color: #7a2327;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.count-value {
+  font-family: "Great Vibes", cursive;
+  font-size: 1.8rem;
+  color: #3d0c11;
+}
+
+@media (min-width: 680px) {
+  .itinerario {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .padres-columns > div {
   text-align: center;
 }
+/* Folding Animation Section */
+.folding-section {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; /* Allow clicking through when closed */
+}
+
+.folding-container {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  max-width: 800px;
+  perspective: 1000px;
+}
+
+.fold {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  transition: transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 10px 40px rgba(122, 35, 39, 0.3);
+  pointer-events: auto;
+  /* Start with panels open (showing photos) */
+  transform: rotateY(0deg) translateZ(0px);
+}
+
+.left-fold {
+  left: 0;
+  transform-origin: right center;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.right-fold {
+  right: 0;
+  transform-origin: left center;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.fold-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease-in-out;
+  /* Start with images visible */
+  opacity: 1;
+}
+
+/* Folding state - when scrolling to hide photos */
+.folding-section.folding .left-fold {
+  transform: rotateY(90deg) translateZ(-50px);
+}
+
+.folding-section.folding .right-fold {
+  transform: rotateY(-90deg) translateZ(-50px);
+}
+
+.folding-section.folding .fold-image {
+  opacity: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .folding-container {
+    height: 60vh;
+  }
+  
+  .fold {
+    border-radius: 0.5rem;
+  }
+}
+
 /* Animaciones */
 @keyframes fadeIn {
   from {
