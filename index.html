@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap"
         rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
@@ -19,10 +21,10 @@
     <section class="folding-section" id="foldingSection">
         <div class="folding-container">
             <div class="fold left-fold" id="leftFold">
-                <img src="fotos/CF2.jpg" alt="Carolina y Fernando" class="fold-image">
+                <img src="fotos/2.jpg" alt="Carolina y Fernando" class="fold-image">
             </div>
             <div class="fold right-fold" id="rightFold">
-                <img src="fotos/CF1.jpg" alt="Carolina y Fernando" class="fold-image">
+                <img src="fotos/1.jpg" alt="Carolina y Fernando" class="fold-image">
             </div>
         </div>
     </section>
@@ -44,24 +46,20 @@
             </div>
         </div>
     </section>
-    <section class="countdown-section" aria-live="polite">
-        <div class="countdown-wrap">
-            <div class="count-label">Solo faltan:</div>
-            <div class="count-value" id="countdown">Cargando...</div>
-        </div>
-    </section>
     <section class="info">
         <div class="details">
             <h2 class="subtitle">22 de noviembre de 2025</h2>
-            <p class="big-emoji">⛪</p>
+            <span class="material-icons it-icon">church</span>
             <h2 class="subtitle">Capilla Nuestra Señora del Rosario</h2>
-            <p class="subtitle">a las 17:00</p>
+            <div class="it-time">17:00</div>
             <a href="https://www.google.com/maps/search/?api=1&query=Capilla+Nuestra+Se%C3%B1ora+del+Rosario,+Calle+Teniente+W+Vega,+Santa+Cruz+de+la+Sierra,+Bolivia"
                 target="_blank" rel="noopener" class="maps-btn">Calle Teniente W Vega, Entre 1er y 2do
                 Anillo, Zona del Parque Urbano, Santa Cruz de la Sierra, Bolivia</a>
-            <p class="big-emoji">🎉</p>
+            <br>
+            <br>
+            <span class="material-icons it-icon">celebration</span>
             <h2 class="subtitle">Salón de Eventos Ana María Norte</h2>
-            <p class="subtitle">a las 20:00</p>
+            <div class="it-time">19:30</div>
             <a href="https://www.google.com/maps/search/?api=1&query=Sal%C3%B3n+de+Eventos+Ana+Mar%C3%ADa+Norte,+Av+Cristo+Redentor,+Santa+Cruz+de+la+Sierra,+Bolivia"
                 target="_blank" rel="noopener" class="maps-btn">Av Cristo Redentor, Entre 4to y
                 5to Anillo, Calle 8, Santa Cruz de la Sierra, Bolivia</a>
@@ -72,39 +70,45 @@
             </a>
         </div>
     </section>
-<section class="itinerario-section">
+    <section class="countdown-section" aria-live="polite">
+        <div class="countdown-wrap">
+            <div class="count-label">Solo faltan:</div>
+            <div class="count-value" id="countdown">Cargando...</div>
+        </div>
+    </section>
+    <section class="itinerario-section">
         <h2 class="subtitle">Itinerario</h2>
         <div class="itinerario">
             <div class="it-item">
-                <div class="it-icon">⛪</div>
+                <span class="material-icons it-icon">church</span>
                 <div class="it-text">
                     <div class="it-title">Ceremonia Religiosa</div>
                     <div class="it-time">17:00</div>
                 </div>
             </div>
             <div class="it-item">
-                <div class="it-icon">🥂</div>
+                <span class="material-icons it-icon"><svg xmlns="http://www.w3.org/2000/svg" width="4.5rem" height="4.5rem" viewBox="0 -960 960 960" fill="currentColor"><path d="M373-120v-212.68Q309-338 246-346.5T120-370l15-60q85 20 171.14 28.5 86.14 8.5 174.3 8.5 87.16 0 173.3-8.5Q739.87-410 825-430l15 60q-63 15-125.81 23.61Q651.39-337.78 587-333v213H373Zm107-334q-30 0-51.5-21.5T407-527.45q0-29.55 21.5-51.05Q450-600 480.45-600q29.55 0 51.05 21.44Q553-557.11 553-527q0 30-21.44 51.5Q510.11-454 480-454ZM169.9-570q-20.9 0-35.4-14.5T120-619.9q0-20.1 14.5-35.1t35.4-15q20.1 0 35.1 15t15 35.1q0 20.9-15 35.4T169.9-570Zm620 0q-20.9 0-35.4-14.5T740-619.9q0-20.1 14.5-35.1t35.4-15q20.1 0 35.1 15t15 35.1q0 20.9-15 35.4T789.9-570Zm-500-150q-20.9 0-35.4-14.5T240-769.9q0-20.1 14.5-35.1t35.4-15q20.1 0 35.1 15t15 35.1q0 20.9-15 35.4T289.9-720Zm380 0q-20.9 0-35.4-14.5T620-769.9q0-20.1 14.5-35.1t35.4-15q20.1 0 35.1 15t15 35.1q0 20.9-15 35.4T669.9-720Zm-190-60q-20.9 0-35.4-14.5T430-829.9q0-20.1 14.5-35.1t35.4-15q20.1 0 35.1 15t15 35.1q0 20.9-15 35.4T479.9-780Z"/></svg></span>
                 <div class="it-text">
                     <div class="it-title">Recepción Social</div>
                     <div class="it-time">19:30</div>
                 </div>
             </div>
             <div class="it-item">
-                <div class="it-icon">💃</div>
+                <span class="material-icons it-icon"><svg xmlns="http://www.w3.org/2000/svg" width="4.5rem" height="4.5rem" viewBox="0 -960 960 960" fill="currentColor"><path d="M40-120v-160q0-29 20.5-49.5T110-350h141q17 0 32.5 8.5T310-318q29 42 74 65t96 23q51 0 96-23t75-65q11-15 26-23.5t32-8.5h141q29 0 49.5 20.5T920-280v160H660v-119q-36 33-82.5 51T480-170q-51 0-97-18t-83-51v119H40Zm120-300q-45 0-77.5-32.5T50-530q0-46 32.5-78t77.5-32q46 0 78 32t32 78q0 45-32 77.5T160-420Zm640 0q-45 0-77.5-32.5T690-530q0-46 32.5-78t77.5-32q46 0 78 32t32 78q0 45-32 77.5T800-420ZM480-540q-57-48-95.5-81T323-679q-23-25-33-47t-10-47q0-45 32-76t78-31q27 0 50.5 12.5T480-833q16-22 39.5-34.5T570-880q46 0 78 31t32 76q0 25-10 47t-33 47q-23 25-61.5 58T480-540Zm0-79q85-71 112.5-100.5T620-771q0-20-14-34.5T572-820q-13 0-26 7t-31 24l-35 33-35-33q-18-17-31-24t-26-7q-20 0-34 14.5T340-771q0 22 27.5 51.5T480-619Zm0 0Z"/></svg></span>
                 <div class="it-text">
                     <div class="it-title">Ingreso de los Novios</div>
                     <div class="it-time">20:00</div>
                 </div>
             </div>
             <div class="it-item">
-                <div class="it-icon">🍽️</div>
+                <span class="material-icons it-icon">restaurant</span>
                 <div class="it-text">
                     <div class="it-title">Cena</div>
                     <div class="it-time">20:30</div>
                 </div>
             </div>
             <div class="it-item">
-                <div class="it-icon">🎂</div>
+                <span class="material-icons it-icon">cake</span>
                 <div class="it-text">
                     <div class="it-title">Corte de Torta</div>
                     <div class="it-time">23:00</div>
@@ -113,14 +117,14 @@
         </div>
     </section>
     <footer class="footer">
-        <p>Con amor ❤️<br> Carolina & Fernando</p>
+        <p>Con amor <span class="material-icons" style="font-size:1em;vertical-align:middle;color:red;">favorite</span><br> Carolina & Fernando</p>
         <audio id="bgAudio" loop>
             <source src="assets\canon-in-d-pachelbel-190929.mp3" type="audio/mpeg">
             Tu navegador no soporta el elemento de audio.
         </audio>
     </footer>
         <!-- Fixed emoji play/pause button (top-right) -->
-    <button id="audioToggleBtn" class="audio-toggle" aria-label="Reproducir música" aria-pressed="false">🎵</button>
+    <button id="audioToggleBtn" class="audio-toggle" aria-label="Reproducir música" aria-pressed="false"><span class="material-icons">music_note</span></button>
     <script src="script.js"></script>
 </body>
 
